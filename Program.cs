@@ -32,6 +32,13 @@ namespace Chapter02
             //int length1 = name.Length; will give a compile error for example, since the compiler doesn't know the data type of name.
             int length2 = ((string)name).Length; //this works because we are telling the compiler name is a string stored in object type
             Console.WriteLine($"{name} has {length2} characters.");
+
+            // Dynamic Types
+            // The dynamic type allows for storing any datatype, more than object type. This comes at cost to performance
+            // You can invoke the type's members without explicitly casting the type (see line 33)
+            // Intellisense also cannot suggest methods or members for this type as it is not explicitly stated to be a string type
+            dynamic anotherName = "Geoff";
+            int anotherNameLength = anotherName.Length;
         }
     }
 }
