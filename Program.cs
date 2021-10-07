@@ -46,7 +46,18 @@ namespace Chapter02
             // Intellisense also cannot suggest methods or members for this type as it is not explicitly stated to be a string type
             dynamic anotherName = "Geoff";
             int anotherNameLength = anotherName.Length;
-            Console.WriteLine($"Dynamics \n{anotherName} has {anotherNameLength} characters.");
+            Console.WriteLine($"Dynamics \n{anotherName} has {anotherNameLength} characters.\n");
+
+
+            // Null Values
+            // Null is used when a variable that has not been set yet and different from 0 as that is a value of 0
+            int? thisCouldBeNull = null;
+            Console.WriteLine("Null Values\n");
+            Console.WriteLine($"The value of thisCouldBeNull when set to null is: {thisCouldBeNull}");
+            thisCouldBeNull = 7;
+            Console.WriteLine($"The value of thisCouldBeNull when set to 7 is: {thisCouldBeNull}\n");
+
+
         }
     }
 }
